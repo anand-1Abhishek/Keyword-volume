@@ -8,7 +8,7 @@ function App() {
   const handleSearch = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/search-volume",
+        "https://volume-search-backend.onrender.com/api/search-volume",
         {
           keyword:keyword.toLowerCase(),
         }
