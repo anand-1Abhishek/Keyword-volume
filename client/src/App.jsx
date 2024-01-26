@@ -10,7 +10,7 @@ function App() {
       const response = await axios.post(
         "http://localhost:3001/api/search-volume",
         {
-          keyword,
+          keyword:keyword.toLowerCase(),
         }
       );
       setSearchVolume(response.data.searchVolume);
@@ -45,7 +45,7 @@ function App() {
         />
         <button
           onClick={handleSearch}
-          className="btn  btn-outline-secondary"
+          className="btn  btn-outline-secondary rounded-lg"
           type="button"
           id="button-addon2"
         >
